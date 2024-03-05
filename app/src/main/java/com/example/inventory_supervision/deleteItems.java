@@ -16,5 +16,10 @@ public class deleteItems extends AppCompatActivity {
         setContentView(R.layout.activity_delete_items);
     }
 
+    public void deletefrmdatabase(View v)
+    {
 
+            Toast.makeText(deleteItems.this,"Item deleted",Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(deleteItems.this, Dashboard.class));
+    }
 }
