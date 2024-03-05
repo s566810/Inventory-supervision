@@ -18,5 +18,27 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
     }
 
+    public void addproduct( View v){
 
+        Intent i = new Intent(this,additem.class);
+        startActivity(i);
+
+    }
+    public void deleteproduct( View v){
+
+        Intent i = new Intent(this,deleteItems.class);
+        startActivity(i);
+
+    }
+    public void viewInventory( View v){
+
+        Intent i = new Intent(this,viewInventoryActivity.class);
+        startActivity(i);
+    }
+    public void searchInventory( View v){
+
+        Intent i = new Intent(this,ScanItems.class);
+        startActivity(i);
+
+    }
 }
