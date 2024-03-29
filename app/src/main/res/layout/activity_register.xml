@@ -73,6 +73,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.663" />
 
+    <EditText
+        android:id="@+id/departmentName"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@id/confirmPassword"
+        android:layout_centerHorizontal="true"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="Department Name"
+        android:inputType="textPersonName"
+        android:textColor="#100F0F"
+        android:textColorHint="#101010"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761" />
+
     <Button
         android:id="@+id/button_register"
         android:layout_width="wrap_content"
@@ -88,7 +108,7 @@
         app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirmPassword"
-        app:layout_constraintVertical_bias="0.146" />
+        app:layout_constraintVertical_bias="0.612" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
