@@ -16,13 +16,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void login (View view)
     {
-        Intent i = new Intent(getApplicationContext(),LoginActivity.class);
+        Intent i = new Intent(this,LoginActivity.class);
 
         startActivity(i);
     }
     public void register (View view)
     {
-        Intent i = new Intent(getApplicationContext(),RegisterActivity.class);
+        Intent i = new Intent(this,RegisterActivity.class);
 
         startActivity(i);
     }
