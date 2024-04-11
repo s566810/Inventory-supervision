@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -54,7 +57,30 @@ public class CartActivity extends AppCompatActivity {
         // Update total items count and total sum
         updateTotalItemsAndSum();
     }
+    public void payment(View v) {
+        // Perform payment processing here (e.g., communicate with a payment gateway)
 
+        // If payment is successful
+        Toast.makeText(this, "Payment successful", Toast.LENGTH_SHORT).show();
+
+        // Clear the cart
+        clearCart();
+
+        // Redirect back to ViewInventoryActivity
+        startActivity(new Intent(CartActivity.this, viewInventoryActivity.class));
+        finish(); // Finish the current activity to prevent returning to it when pressing back
+    }
+
+    private void clearCart() {
+        // Clear the list of cart items
+        cartItemList.clear();
+
+        // Notify the adapter that the dataset has changed
+        adapter.notifyDataSetChanged();
+
+        // Update total items count and total sum
+        updateTotalItemsAndSum();
+    }
 
     private void updateTotalItemsAndSum() {
         // Calculate total items count

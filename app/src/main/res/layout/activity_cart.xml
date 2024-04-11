@@ -57,4 +57,11 @@
         android:layout_weight="1"
         android:layout_marginTop="20dp" />
 
+    <Button
+        android:id="@+id/Payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="payment"
+        android:text="Click to pay" />
+
 </LinearLayout>
