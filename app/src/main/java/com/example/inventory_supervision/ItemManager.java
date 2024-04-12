@@ -1,51 +1,59 @@
 package com.example.inventory_supervision;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.text.TextUtils;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ItemManager {
-    private static final String ITEM_LIST_PREF = "item_list_pref";
-    private static final String ITEM_LIST_KEY = "item_list_key";
+    private static List<String> itemList = new ArrayList<>();
 
-    // Method to save itemList to SharedPreferences
-    public static void saveItemList(Context context, List<String> itemList) {
-        SharedPreferences sharedPreferences = context.getSharedPreferences(ITEM_LIST_PREF, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        Gson gson = new Gson();
-        String jsonItemList = gson.toJson(itemList);
-        editor.putString(ITEM_LIST_KEY, jsonItemList);
-        editor.apply();
+    // Method to add an item to the list
+    public static void addItem(String item) {
+        itemList.add(item);
     }
 
-    // Method to retrieve itemList from SharedPreferences
-    public static List<String> getItemList(Context context) {
-        SharedPreferences sharedPreferences = context.getSharedPreferences(ITEM_LIST_PREF, Context.MODE_PRIVATE);
-        String jsonItemList = sharedPreferences.getString(ITEM_LIST_KEY, null);
-        List<String> itemList;
-        if (!TextUtils.isEmpty(jsonItemList)) {
-            Gson gson = new Gson();
-            Type type = new TypeToken<List<String>>() {}.getType();
-            itemList = gson.fromJson(jsonItemList, type);
-        } else {
-            itemList = new ArrayList<>();
-        }
+    // Method to remove an item from the list
+    public static void removeItem(String item) {
+        itemList.remove(item);
+    }
+
+    // Method to retrieve the item list
+    public static List<String> getItemList() {
         return itemList;
     }
 
+    public static String department;
+
+    public static void saveDepartment(String dept) {
+        department = dept;
+    }
+
+    public static String getDepartment() {
+        return department;
+    }
+
+    public static void clearDepartment() {
+        department = null;
+    }
+
+    // Method to update the item in the list
+    public static void updateItem(String oldItem, String newItem) {
+        int index = itemList.indexOf(oldItem);
+        if (index != -1) {
+            itemList.set(index, newItem);
+        }
+    }
+
+    // Method to save items
+    public static void saveItemList(List<String> items) {
+        itemList.clear();
+        itemList.addAll(items);
+    }
+
     // Method to print all items
-    public static void printAllItems(Context context) {
-        List<String> itemList = getItemList(context);
-        if (itemList != null) {
-            for (String jsonItem : itemList) {
-                System.out.println(jsonItem);
+    public static void printAllItems() {
+        if (!itemList.isEmpty()) {
+            for (String item : itemList) {
+                System.out.println(item);
             }
         } else {
             System.out.println("Item list is empty.");
