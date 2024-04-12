@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -34,6 +35,11 @@ android {
 dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.6.1") // AndroidX version
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+
+    implementation("com.google.firebase:firebase-database")
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-analytics")
 
     // Migrate other dependencies to AndroidX equivalents as needed
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")

@@ -17,6 +17,15 @@
         android:theme="@style/Theme.Inventory_Supervision"
         tools:targetApi="31">
         <activity
+            android:name=".admindashboard"
+            android:exported="false" />
+        <activity
+            android:name=".storeNames"
+            android:exported="false" />
+        <activity
+            android:name=".UserDetails"
+            android:exported="false" />
+        <activity
             android:name=".CartActivity"
             android:exported="false" />
         <activity
@@ -24,6 +33,9 @@
             android:exported="false" />
         <activity
             android:name=".ScanCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ScanCodeActivitydel"
             android:exported="false" />
         <activity
             android:name=".ScanItems"

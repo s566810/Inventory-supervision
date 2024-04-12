@@ -53,13 +53,17 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <TextView
+    <EditText
         android:id="@+id/displaycode"
-        android:layout_width="wrap_content"
+        android:layout_width="236dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/productNameToDelete"
         android:layout_marginLeft="150dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#201E1E"
+        android:textColorHighlight="#2B2929"
+        android:textColorHint="#120E0E"
+        android:textColorLink="#1C1A1A"
         android:textSize="24sp" />
 
     <Button
@@ -69,7 +73,7 @@
         android:layout_below="@id/textView3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Scan Bar/QR Code"
+        android:text="Scan BarCode"
         android:textStyle="italic" />
 
     <Button

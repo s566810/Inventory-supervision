@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class Dashboard extends AppCompatActivity {
+public class admindashboard extends AppCompatActivity {
 
     private static final String PREF_NAME = "UserPrefs";
     private static final String KEY_DEPARTMENT = "Department";
@@ -20,18 +20,17 @@ public class Dashboard extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        SharedPreferences preferences = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
-        String userDepartment = preferences.getString(KEY_DEPARTMENT, "");
-       // String userEmail = getIntent().getStringExtra("USER_EMAIL");
-
 //        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 //        final FirebaseUser users = firebaseAuth.getCurrentUser();
+
 //        String finaluser = users.getEmail();
 //        String[] resultemail = finaluser.split("@");
 //
-       //TextView name = findViewById(R.id.name);        name.setText("Hello,"+userEmail);
+//        TextView name = findViewById(R.id.name);
+//        name.setText("Hello,"+ resultemail[0]);
 
+        SharedPreferences preferences = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        String userDepartment = preferences.getString(KEY_DEPARTMENT, "");
         //Log.d("Department","useDepartment"+userDepartment);
 
 //        // Load different layouts based on the user's department
@@ -40,7 +39,7 @@ public class Dashboard extends AppCompatActivity {
 //        } else {
 //            setContentView(R.layout.activity_dashboard);
 //        }
-
+        setContentView(R.layout.activity_admindashboard);
 //        String department = ItemManager.getDepartment();
 //        Log.d("Department", "useDepartment" + department);
 //
@@ -51,14 +50,14 @@ public class Dashboard extends AppCompatActivity {
 //            setContentView(R.layout.activity_dashboard);
 //        }
 
-        setContentView(R.layout.activity_dashboard);
+
     }
-    protected void onResume() {
-        super.onResume();
-        Log.d("cleared", "10");
-        ItemManager.clearDepartment();
-        //clearSharedPreferences();
-    }
+//    protected void onResume() {
+//        super.onResume();
+//        Log.d("cleared", "10");
+//        ItemManager.clearDepartment();
+//        //clearSharedPreferences();
+//    }
 
 //    private void clearSharedPreferences() {
 //        SharedPreferences preferences = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
@@ -120,7 +119,6 @@ public class Dashboard extends AppCompatActivity {
         startActivity(intent);
         finish(); // Close the Dashboard activity to prevent going back to it with the back button
     }
-
 
 
 }

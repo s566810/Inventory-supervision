@@ -48,7 +48,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            itemBarcode = itemView.findViewById(R.id.cartitembarcode);
+            itemBarcode = itemView.findViewById(R.id.Sname);
             itemName = itemView.findViewById(R.id.cartitemname);
             itemPrice = itemView.findViewById(R.id.cartitemprice);
             itemCategory = itemView.findViewById(R.id.cartitemcategory);

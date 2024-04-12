@@ -16,21 +16,21 @@
         android:padding="5dp">
 
         <TextView
-            android:id="@+id/viewitembarcodename"
+            android:id="@+id/StoreName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Item Barcode"
+            android:text="Barcode"
             android:textColor="#090808"
             android:textStyle="bold" />
 
 
         <TextView
-            android:id="@+id/cartitembarcode"
+            android:id="@+id/Sname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="53dp"
             android:layout_marginLeft="50dp"
-            android:layout_toEndOf="@+id/viewitembarcodename"
+            android:layout_toEndOf="@+id/StoreName"
             android:text="TextView"
             android:textColor="#0C0B0B" />
 
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Item Name"
+            android:text="Name"
             android:textColor="#171313"
             android:textStyle="bold" />
 
@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="Item Price $"
+            android:text="Price $"
             android:textColor="#050505"
             android:textStyle="bold" />
 
@@ -80,7 +80,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
-            android:text="Item Category"
+            android:text="Group"
             android:textColor="#151414"
             android:textStyle="bold" />
 
@@ -88,7 +88,7 @@
             android:id="@+id/cartitemcategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="47dp"
+            android:layout_marginStart="67dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="60dp"
             android:layout_toEndOf="@+id/viewitemcategoryname"
@@ -97,16 +97,16 @@
 
         <Button
             android:id="@+id/AddButton"
-            android:layout_width="116dp"
-            android:layout_height="73dp"
+            android:layout_width="wrap_content"
+            android:layout_height="68dp"
 
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="242dp"
             android:layout_marginTop="41dp"
-            android:layout_marginEnd="30dp"
-            android:text="Add To Cart" />
+            android:layout_marginEnd="16dp"
+            android:text="Cart" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

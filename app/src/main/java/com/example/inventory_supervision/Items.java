@@ -50,4 +50,14 @@ public class Items {
     public String getItembarcode() {
         return itembarcode;
     }
+
+    @Override
+    public String toString() {
+        return "Items{" +
+                "itemname='" + itemname + '\'' +
+                ", itemcategory='" + itemcategory + '\'' +
+                ", itemprice='" + itemprice + '\'' +
+                ", itembarcode='" + itembarcode + '\'' +
+                '}';
+    }
 }

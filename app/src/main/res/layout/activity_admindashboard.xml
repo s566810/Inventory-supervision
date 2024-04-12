@@ -6,7 +6,6 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/storenames"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -22,7 +21,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="28dp"
             android:layout_marginBottom="60dp"
-            android:text="Welcome,"
+            android:text="Hello,"
             android:textColor="#F57C00"
             android:textSize="40sp"
             android:textStyle="bold" />
@@ -42,8 +41,64 @@
             <!-- Row 1 -->
 
             <!-- Column 1 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/addItems"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="addproduct"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Item"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <!-- Column 2 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/deleteItems"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="deleteproduct"
+                        android:text="Delete "
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <!-- Row 2 -->
 
@@ -57,7 +112,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                android:onClick="searchInventory"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -72,7 +126,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="searchInventory"
-                        android:text="Search"
+                        android:text="Search "
                         android:textSize="17dp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -88,7 +142,6 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                android:onClick="viewInventory"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -121,7 +174,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                android:onClick="StoreNames"
+                android:onClick="updateproduct"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -134,9 +187,8 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:onClick="StoreNames"
-                        android:text="Store Names"
+                        android:layout_height="wrap_content"
+                        android:text="Update "
                         android:textSize="17dp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -152,7 +204,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                android:onClick="Cart"
+                android:onClick="userDetails"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
 
@@ -164,10 +216,10 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/CartItems"
+                        android:id="@+id/Users"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CartItem"
+                        android:text="Users"
                         android:textSize="17dp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -178,7 +230,7 @@
         </GridLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/Logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="logout"
